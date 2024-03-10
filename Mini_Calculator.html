@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM -I</title>
+    <style>
+      input[type=number]
+      { 
+         height: 30px;
+         border-style: solid;
+         border-color: black;
+         margin-top:100px;
+         margin-left: 20px;
+      }
+      button{
+         
+         margin-top: 20px;
+         width:120px;
+         height: 30px;
+         background-color: rgb(63, 60, 60);
+         color:white;
+         padding: 2px;
+         border-radius: 8px;
+      }
+    </style>
+</head>
+<body>
+   <input type="number"  id="input1">
+   <input type="number"  id="input2">
+<div>
+   <button id="add">Add</button>
+   <button id="sub">Subtact</button>
+   <button id="div">Divide</button>
+   <button id="mul">Multiply</button> 
+</div>
+  
+</body>
+
+<script>
+
+ let but1 = document.getElementById('add')
+ console.log(but1);
+
+ let but4 = document.getElementById('sub')
+ console.log(but4);
+
+ let but2 = document.getElementById('div')
+ console.log(but2);
+
+ let but3= document.getElementById('mul')
+ console.log(but3);
+
+but1.addEventListener('click' ,sum);
+ function sum(){
+    let num2 = document.getElementById('input2').value;
+    let numericNum2 = parseFloat(num2);
+    let num1 = document.getElementById('input1').value;
+
+    let numericNum1 = parseFloat(num1);
+
+    let result = numericNum1+numericNum2;
+
+    alert(result);
+ }
+ 
+ but2.addEventListener('click' ,divide);
+ function divide(){
+    let num2 = document.getElementById('input2').value;
+    let numericNum2 = parseFloat(num2);
+    let num1 = document.getElementById('input1').value;
+
+    let numericNum1 = parseFloat(num1);
+
+    let result1 = numericNum1/numericNum2;
+
+    alert(result1);
+ }
+
+ but3.addEventListener('click' , guna);
+ function guna(){
+    let num2 = document.getElementById('input2').value;
+    let numericNum2 = parseFloat(num2);
+    let num1 = document.getElementById('input1').value;
+
+    let numericNum1 = parseFloat(num1);
+
+    let result2 = numericNum1*(numericNum2);
+
+    alert(result2);
+ }
+
+ but4.addEventListener('click' ,ghtana);
+ function ghtana(){
+    let num2 = document.getElementById('input2').value;
+    let numericNum2 = parseFloat(num2);
+    let num1 = document.getElementById('input1').value;
+
+    let numericNum1 = parseFloat(num1);
+
+    let result3 = numericNum1-numericNum2;
+
+    alert(result3);
+ }
+
+</script>
+
+</html>
